@@ -1,0 +1,4 @@
+<!--components/tab-page/tab-page.wxml-->
+<view class="page-content">
+  <slot></slot>
+</view>

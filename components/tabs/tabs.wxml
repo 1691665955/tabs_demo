@@ -1,0 +1,16 @@
+<!--components/tabs/tabs.wxml-->
+<view class="tabs tab-class">
+  <view class="tabs-header tab-header-class">
+    <view class="tabs-header-content">
+      <view class="tabs-item tab-item-class" style="border-bottom: 4rpx solid {{current == index ? activeColor: '#FFFFFF00'}};" wx:for="{{list}}" wx:key="name" bindtap="_selectIndex" data-index="{{index}}">
+        <view class="tabs-item-name tab-item-name-class" style="color: {{current == index ? activeColor : normalColor}};">{{item.name}}</view>
+        <view class="tabs-item-badge tab-item-badge-class" wx:if="{{showBadge && item.count > 0}}">{{item.count}}</view>
+      </view>
+    </view>
+  </view>
+  <swiper class="tabs-page tab-page-class" current="{{current}}" circular="{{circular}}" bindchange="_swiperChange">
+    <swiper-item catchtouchmove="{{swiper ? '' : '_onTouchMove'}}" wx:for="{{list}}" wx:key="name">
+      <slot name="{{item.name}}"></slot>
+    </swiper-item>
+  </swiper>
+</view>

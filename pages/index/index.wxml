@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <tabs list="{{tabs}}" tab-class="tab-class" showBadge="{{true}}" swiper="{{true}}" activeColor="#FF0000" normalColor="#888888" bindchange="tabChange">
+    <tab-page slot="{{item.name}}" wx:for="{{tabs}}" wx:key="name">
+      <view style="height: 100%;background-color: {{colors[index]}};"></view>
+    </tab-page>
+  </tabs>
+</view>

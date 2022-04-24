@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tabs": "/components/tabs/tabs",
+    "tab-page": "/components/tab-page/tab-page"
+  },
+  "navigationBarTitleText": "tabs组件"
+}
